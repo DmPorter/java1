@@ -82,10 +82,13 @@ public class Main {
     }
 
     public static void Ex11(){
-        char i = 301;
-        System.out.println(i);
+
         String asd = "asddddĬĭ";
-        System.out.println(Arrays.toString(asd.codePoints().toArray()));
+        int[] utf =  asd.codePoints().toArray();
+        for(int i = 0; i < utf.length; i++){
+            if (utf[i] > 255)
+                System.out.println((char)utf[i] + " " + utf[i]);
+        }
 
     }
 
